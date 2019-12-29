@@ -1,0 +1,90 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
+            <h1 id="light_txt"> Welcome to this study.</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+                You will earn {{ Constants.fixed_pay }} {{ Constants.exp_currency }} for your <b>complete</b> participation in this study.
+            <br><br>
+                During the study you will face two parts. In each you will have the possibility to <b>gain a bonus</b> (Bonus 1 and Bonus 2).
+            <br><br>
+            Please read these instructions carefully as they describe how you can earn the bonus payments.
+            <br><br>
+            After finishing the two parts you will be asked to fill out a short questionnaire.
+            </p>
+            <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Continue </button>
+            <br><br>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+<!-- CSS -->
+    <style type="text/css">
+        #light_bg{
+            background-color: #ffffff;
+        }
+        #medium_bg{
+            background-color: #cee7eb;
+        }
+        #dark_bg{
+            background-color: #0a798a;
+        }
+        #light_txt{
+            color: #ffffff;
+        }
+        #medium_txt{
+            color: #cee7eb;
+        }
+        #bright_txt {
+            color: #ffa200;
+        }
+        #dark_txt {
+            color: #0a798a;
+        }
+        .center {
+            text-align: center;
+        }
+        #highlight_title {
+            background-color: #0a798a;
+            color: #ffffff;
+        }
+        .button2 {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #000000
+        }
+        .button2:hover {
+            background-color: #000000;
+            color: #ffa200;
+            border: 2px solid #ffa200
+        }
+        .button {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 2px solid #ffa200
+        }
+        .button:hover {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #3E2723
+        }
+        .message{
+            background-color: #E1BEE7;
+            color:#000000;
+        }
+    </style>
+{% endblock %}

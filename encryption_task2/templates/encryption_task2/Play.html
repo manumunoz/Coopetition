@@ -1,0 +1,191 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
+            <h1 id="light_txt">Part 2 <small id="bright_txt">(Round {{ player.round_number }})</small></h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+                <table id="t01">
+                    <col width="200">
+                    <col width="200">
+                    <col width="200">
+                    <tr>
+                        <td align="center"><h1>{{ player.word_char_1 }}</h1></td>
+                        <td align="center"><h1>{{ player.word_char_2 }}</h1></td>
+                        <td align="center"><h1>{{ player.word_char_3 }}</h1></td>
+                    </tr>
+                    <tr>
+                        <td align="center">{% formfield player.word_code_1 %}</td>
+                        <td align="center">{% formfield player.word_code_2 %}</td>
+                        <td align="center">{% formfield player.word_code_3 %}</td>
+                    </tr>
+                </table>
+            </p>
+            <p>
+                <table align="center">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <tr>
+                        <td align="center" id="highlight_title">{{ player.random_char_1  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_2  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_3  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_4  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_5  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_6  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_7  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_8  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_9  }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_10 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_11 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_12 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_13 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_14 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_15 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_16 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_17 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_18 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_19 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_20 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_21 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_22 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_23 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_24 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_25 }}</td>
+                        <td align="center" id="highlight_title">{{ player.random_char_26 }}</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_1  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_2  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_3  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_4  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_5  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_6  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_7  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_8  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_9  }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_10 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_11 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_12 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_13 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_14 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_15 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_16 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_17 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_18 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_19 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_20 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_21 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_22 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_23 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_24 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_25 }}</td>
+                        <td align="center" style="border: 1px solid black;">{{ player.random_code_26 }}</td>
+                    </tr>
+                </table>
+            </p>
+            <button type="otree-btn-next" class="btn button2 btn-md" style="float: right;"> Submit </button>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+<!-- CSS -->
+    <style type="text/css">
+        #light_bg{
+            background-color: #ffffff;
+        }
+        #medium_bg{
+            background-color: #cee7eb;
+        }
+        #dark_bg{
+            background-color: #0a798a;
+        }
+        #light_txt{
+            color: #ffffff;
+        }
+        #medium_txt{
+            color: #cee7eb;
+        }
+        #bright_txt {
+            color: #ffa200;
+        }
+        #dark_txt {
+            color: #0a798a;
+        }
+        .center {
+            text-align: center;
+        }
+        #highlight_title {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .button2 {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #000000
+        }
+        .button2:hover {
+            background-color: #000000;
+            color: #ffa200;
+            border: 2px solid #ffa200
+        }
+        .button {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 2px solid #ffa200
+        }
+        .button:hover {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #3E2723
+        }
+        .message{
+            background-color: #E1BEE7;
+            color:#000000;
+        }
+        table#t01 {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        <table>
+            <tr>
+                <td>Total Number of Rounds:</td><td>{{ player.total_words }}</td>
+            </tr>
+            <tr>
+                <td>Number of correct codes:</td><td>{{ player.good_words }}</td>
+            </tr>
+            <tr>
+                <td>Number of incorrect codes:</td><td>{{ player.bad_words }}</td>
+            </tr>
+        </table>
+    </p>
+
+    {% next_button %}
+
+{% endblock %}
+
+

@@ -1,0 +1,160 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
+            <h1 id="light_txt"> Instructions <span id="bright_txt">Part 2</span.</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+            In this part of the study, you choose between two schemes that determine how your Bonus 2 is calculated.
+            <br><br>
+            Afterwards, you will be <b>randomly matched with another participant</b>, who also performed the encryption
+                task in Part 1, and who chose the same scheme as you.
+            <br><br>
+            One of you will be randomly labeled <b>“Player A”</b> and the other one <b>“Player B”</b>.
+            <br><br>
+            You and the other player will perform the <b>encryption task</b> in <b>one scored round</b>.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 border rounded" id="light_bg">
+            <h5>If you choose Scheme 1:</h5>
+            <p>
+            Your and the other player’s <b>Bonus 2</b> is determined as follows:
+            <br><br>
+            Both players earn X.X$ times
+            <br>
+            <ul>
+                <li>the total number of your correct words.</li>
+                <li>half of the sum of both players' correct words</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col-sm-6 border rounded" id="light_bg">
+            <h5>If you choose Scheme 2:</h5>
+            <p>
+            Your and the other player’s <b>Bonus 2</b> is determined as follows:
+            <br><br>
+            The player who correctly encrypted <b>fewer words</b> than the other player earns X.X$ times
+            <ul>
+                <li>the total number of his/her correct words.</li>
+            </ul>
+            The player who correctly encrypted <b>more words</b> than the other player earns X.X$ times
+            <ul>
+                <li>the total number of his/her correct words.</li>
+                <li>two times her/his points</li>
+            </ul>
+            In case of a tie, the computer will randomly choose one of the two players to be paid the latter and the other one to be paid the former.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 border rounded" id="light_bg">
+            <h5>Example Scheme 1:</h5>
+            <br>
+            Player A encrypted 10 words correctly and Player B encrypted 12 words correctly
+            <br>
+            Half of the sum of both players’ correct words is (10+12) / 2 = 11
+            <br>
+            Then Player A receives a total of X.X$ * (10 + 11) = Y$
+            <br>
+            Then Player B receives a total of X.X$ * (12 + 11) = Y$
+            </p>
+        </div>
+        <div class="col-sm-6 border rounded" id="light_bg">
+            <h5>Example Scheme 2:</h5>
+            <br>
+            Player A encrypted 10 words correctly and Player B encrypted 12 words correctly
+            <br>
+            Half of the sum of both players’ correct words is (10+12) / 2 = 11
+            <br>
+            Then Player A receives a total of X.X$ * 10 = Y$
+            <br>
+            Then Player B receives a total of X.X$ * (12 * 3) = Y$
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+               At the end of the experiment, you will receive information about the number of words that you and the other player encrypted correctly.
+            </p>
+            <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Continue </button>
+            <br><br>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+<!-- CSS -->
+    <style type="text/css">
+        #light_bg{
+            background-color: #ffffff;
+        }
+        #medium_bg{
+            background-color: #cee7eb;
+        }
+        #dark_bg{
+            background-color: #0a798a;
+        }
+        #light_txt{
+            color: #ffffff;
+        }
+        #medium_txt{
+            color: #cee7eb;
+        }
+        #bright_txt {
+            color: #ffa200;
+        }
+        #dark_txt {
+            color: #0a798a;
+        }
+        .center {
+            text-align: center;
+        }
+        #highlight_title {
+            background-color: #0a798a;
+            color: #ffffff;
+        }
+        .button2 {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #000000
+        }
+        .button2:hover {
+            background-color: #000000;
+            color: #ffa200;
+            border: 2px solid #ffa200
+        }
+        .button {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 2px solid #ffa200
+        }
+        .button:hover {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #3E2723
+        }
+        .message{
+            background-color: #E1BEE7;
+            color:#000000;
+        }
+    </style>
+{% endblock %}
+
+

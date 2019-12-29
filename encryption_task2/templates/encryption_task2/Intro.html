@@ -1,0 +1,84 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
+            <h1 id="light_txt"> Begin <span id="bright_txt">Part 2</span.</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+            Please click the <b>Start </b>button to begin the encryption task for Part 2.
+            </p>
+            <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Start </button>
+            <br><br>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+<!-- CSS -->
+    <style type="text/css">words
+        #light_bg{
+            background-color: #ffffff;
+        }
+        #medium_bg{
+            background-color: #cee7eb;
+        }
+        #dark_bg{
+            background-color: #0a798a;
+        }
+        #light_txt{
+            color: #ffffff;
+        }
+        #medium_txt{
+            color: #cee7eb;
+        }
+        #bright_txt {
+            color: #ffa200;
+        }
+        #dark_txt {
+            color: #0a798a;
+        }
+        .center {
+            text-align: center;
+        }
+        #highlight_title {
+            background-color: #0a798a;
+            color: #ffffff;
+        }
+        .button2 {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #000000
+        }
+        .button2:hover {
+            background-color: #000000;
+            color: #ffa200;
+            border: 2px solid #ffa200
+        }
+        .button {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 2px solid #ffa200
+        }
+        .button:hover {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #3E2723
+        }
+        .message{
+            background-color: #E1BEE7;
+            color:#000000;
+        }
+    </style>
+{% endblock %}

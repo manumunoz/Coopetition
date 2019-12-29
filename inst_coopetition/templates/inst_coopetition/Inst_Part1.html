@@ -1,0 +1,155 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
+            <h1 id="light_txt"> Instructions <span id="bright_txt">Part 1</span.</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+            In this part of the study you will participate in an <b>encryption task</b>.
+            <br><br>
+            You will be shown a <b>three-letter word</b> and an <b>encryption table</b> on the screen. In the encryption table,
+                each letter of the alphabet is matched with a unique <b>3-digit number</b>.
+            <br><br>
+            <b>Your task</b> is to encrypt each letter of the word by typing the correct 3-digit number below it.
+            <br><br>
+            You will have <b>two minutes</b> to encrypt as many words as possible.
+            <br><br>
+            Your <b>Bonus 1</b> will be determined as follows: <b>for every correct word you will get
+                {{ Constants.correct_pay }}  {{ Constants.exp_currency }} .</b>
+            <br><br>
+            There will be <b>two rounds</b>:
+            <ul>
+            <li>The first is a <b>training round</b> to familiarize you with the task. This will not affect your Bonus 1.</li>
+            <li>The second is a <b>scoring round</b>, in which you will be paid for each correctly encrypted word.</li>
+            </ul>
+            See the example below:
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 border rounded" id="light_bg">
+            <h5>Example (Part 1).</h5>
+            <p>
+            In this example, the word shown on the screen (Figure 1) is <b>NKW</b>.
+                The encryption table on the bottom shows that
+            <ul>
+                <li><b>N</b> is matched to <b>332</b>.</li>
+                <li><b>K</b> is matched to <b>717</b></li>
+                <li><b>W</b> is matched to <b>164</b></li>
+            </ul>
+            After you identify the correct 3-digit numbers, enter them in the boxes below the letters. Before you enter
+            the number, the box will initially display a zero.
+            </p>
+        </div>
+        <div class="col-sm-8 border rounded" style='background-color: #ffffff;'>
+            <h5>Figure 1.</h5>
+            <img width="100%" src="{% static "inst_coopetition/encrypt_1.png" %}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 border rounded" id="light_bg">
+            <h5>Example (Part 2).</h5>
+            <p>
+            The correct screen should look like the one displayed in Figure 2.
+            </p>
+        </div>
+        <div class="col-sm-8 border rounded" style='background-color: #ffffff;'>
+            <h5>Figure 2.</h5>
+            <img width="100%" src="{% static "inst_coopetition/encrypt_2.png" %}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+            After clicking on the <b>“Submit” button</b>, a new randomly formed word will appear on the next
+                screen for you to encrypt. Also, a new code 3-digit number will be generated for each letter.
+            <br><br>
+            The computer will count the <b>number of words you encrypted correctly</b>. You will be informed of your
+                score of correct answers at the end of the study.
+{#                This number is shown on the top of the screen.#}
+            <br><br>
+            Note that the <b>remaining time</b> is shown in the upper right left of the screen.
+            <br><br>
+            <b>Tip</b>: <i>You can easily switch between the boxes to enter the numbers by using the
+                <b>“tabulator” key</b> on your keyboard</i>.
+                <br>
+                If you understood the instructions please click on the continue button.
+            </p>
+            <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Continue </button>
+            <br><br>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block styles %}
+<!-- CSS -->
+    <style type="text/css">
+        #light_bg{
+            background-color: #ffffff;
+        }
+        #medium_bg{
+            background-color: #cee7eb;
+        }
+        #dark_bg{
+            background-color: #0a798a;
+        }
+        #light_txt{
+            color: #ffffff;
+        }
+        #medium_txt{
+            color: #cee7eb;
+        }
+        #bright_txt {
+            color: #ffa200;
+        }
+        #dark_txt {
+            color: #0a798a;
+        }
+        .center {
+            text-align: center;
+        }
+        #highlight_title {
+            background-color: #0a798a;
+            color: #ffffff;
+        }
+        .button2 {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #000000
+        }
+        .button2:hover {
+            background-color: #000000;
+            color: #ffa200;
+            border: 2px solid #ffa200
+        }
+        .button {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 2px solid #ffa200
+        }
+        .button:hover {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #3E2723
+        }
+        .message{
+            background-color: #E1BEE7;
+            color:#000000;
+        }
+    </style>
+{% endblock %}
+
+
