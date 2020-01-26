@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
-            <h1 id="light_txt"> Information on <span id="bright_txt">Bonuses</span>.</h1>
+            <h1 id="light_txt"> Begin <span id="bright_txt">Trial</span.</h1>
         </div>
     </div>
 </div>
@@ -16,32 +16,10 @@
     <div class="row">
         <div class="col-sm-12 border rounded" id="light_bg">
             <p>
-                <h3>In Part 1</h3>
-                <ul>
-                <li>You scored {{ good_p1 }}</li>
-                <li>Your Bonus 1 is: {{ points1 }}</li>
-                </ul>
-                <br>
-                <h3>In Part 2</h3>
-                <ul>
-                <li>Your payment scheme was: {{ endo }}</li>
-                <li>You scored {{ good_p2 }} </li>
-                <li>The first part of your Bonus 2 is: {{ points1 }}</li>
-                <li>Depending on your partner's score the computer will determine the second part of your Bonus 2</li>
-                </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 border rounded" id="light_bg">
-            <p>
-                The total payment will be processed within <b>{{ Constants.payment_days }} days</b>.
-                <br><br>
-                Please return to <b>MTurk</b>. You will be asked to provide a code to process your payment. Your code is:
-                <br>
-                <h2 id="dark_txt">{{ participant.code }}{{ session.code }}</h2>
-                <br>
+            Please click the <b>Start </b>button to begin the trial of the encryption task for Part 1.
             </p>
-            <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> End participation </button>
+            <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Start </button>
+            <br><br>
         </div>
     </div>
 </div>
@@ -104,5 +82,3 @@
         }
     </style>
 {% endblock %}
-
-

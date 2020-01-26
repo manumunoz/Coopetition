@@ -24,7 +24,7 @@ class Constants(BaseConstants):
     fixed_pay = 10
     exp_currency = "USD dollars"
     correct_pay = 1
-
+    payment_days = 8
 
 
 class Subsession(BaseSubsession):
@@ -37,3 +37,4 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     pass
+

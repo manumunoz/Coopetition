@@ -22,9 +22,20 @@ SESSION_CONFIGS = [
         app_sequence=['inst_coopetition2']
     ),
     dict(
+        name='Choice',
+        num_demo_participants=1,
+        app_sequence=['pay_choice'],
+        # treatment = 3,
+    ),
+    dict(
         name='Payment',
         num_demo_participants=1,
         app_sequence=['payment']
+    ),
+    dict(
+        name='Encryption_Trial',
+        num_demo_participants=1,
+        app_sequence=['encryption_trial']
     ),
     dict(
         name='Encryption_Task',
@@ -39,7 +50,8 @@ SESSION_CONFIGS = [
     dict(
         name='Test_EXO',
         num_demo_participants=1,
-        app_sequence=['inst_coopetition','encryption_task','inst_coopetition2','encryption_task2','payment']
+        app_sequence=['inst_coopetition','encryption_trial','encryption_task','inst_coopetition2','pay_choice','encryption_task2','payment'],
+        treatment = 3,
     ),
 ]
 

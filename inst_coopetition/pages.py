@@ -8,7 +8,6 @@ class Welcome(Page):
 
 
 class Inst_Part1WP(WaitPage):
-    # def after_all_players_arrive(self):
     pass
 
 

@@ -75,14 +75,14 @@ class Intro(Page):
         self.participant.vars['so'] = self.player.get_solution(self.participant.vars['ra'],self.participant.vars['rw'])
         print('Intro:',self.participant.vars['so'])
 
-        if not 'total_words' in self.participant.vars.keys():
-            self.participant.vars['total_words'] = 0
+        if not 'total_trials' in self.participant.vars.keys():
+            self.participant.vars['total_trials'] = 0
         # end if
-        if not 'good_words' in self.participant.vars.keys():
-            self.participant.vars['good_words'] = 0
+        if not 'good_trials' in self.participant.vars.keys():
+            self.participant.vars['good_trials'] = 0
         # end if
-        if not 'bad_words' in self.participant.vars.keys():
-            self.participant.vars['bad_words'] = 0
+        if not 'bad_trials' in self.participant.vars.keys():
+            self.participant.vars['bad_trials'] = 0
         # end if
 
         return self.round_number == 1
@@ -105,7 +105,7 @@ class Play(Page):
         'word_code_3'
     ]
 
-    timer_text = 'Time left in Part 2:'
+    timer_text = 'Time left in trial:'
 
     def get_timeout_seconds(self):
         return self.participant.vars['expiry'] - time.time()
@@ -130,15 +130,15 @@ class Play(Page):
         wc3 = int(self.player.word_code_3)
         print('SysSolution:',sol)
         print('UsrSolution:',[wc1,wc2,wc3])
-        self.participant.vars['total_words'] += 1
+        self.participant.vars['total_trials'] += 1
         if (sol[0] == wc1) and (sol[1] == wc2) and (sol[2] == wc3):
-            self.participant.vars['good_words'] += 1
+            self.participant.vars['good_trials'] += 1
         else:
-            self.participant.vars['bad_words'] += 1
+            self.participant.vars['bad_trials'] += 1
         # end if
-        print('self.participant.vars.total_words =',self.participant.vars['total_words'])
-        print('self.participant.vars.good_words  =',self.participant.vars['good_words'] )
-        print('self.participant.vars.bad_words   =',self.participant.vars['bad_words']  )
+        print('self.participant.vars.total_trials =',self.participant.vars['total_trials'])
+        print('self.participant.vars.good_trials  =',self.participant.vars['good_trials'] )
+        print('self.participant.vars.bad_trials  =',self.participant.vars['bad_trials']  )
     # end def
 
 # end class
@@ -147,9 +147,9 @@ class Play(Page):
 class Results(Page):
 
     def is_displayed(self):
-        self.player.total_words = self.participant.vars['total_words']
-        self.player.good_words  = self.participant.vars['good_words']
-        self.player.bad_words   = self.participant.vars['bad_words']
+        self.player.total_codes = self.participant.vars['total_trials']
+        self.player.good_codes  = self.participant.vars['good_trials']
+        self.player.bad_codes   = self.participant.vars['bad_trials']
         return self.round_number >= Constants.num_rounds
     # end def
 

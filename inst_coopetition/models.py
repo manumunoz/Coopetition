@@ -22,6 +22,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
     fixed_pay = 10
+    total_pay = 20
     exp_currency = "USD dollars"
     correct_pay = 1
 

@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
-            <h1 id="light_txt">Encryption Part 1 <small id="bright_txt">(Word {{ player.round_number }})</small></h1>
+            <h1 id="light_txt">Trial Encryption <small id="bright_txt">(Trial word {{ player.round_number }})</small></h1>
         </div>
     </div>
 </div>
@@ -33,7 +33,6 @@
                 </table>
             </p>
             <p>
-            <h4 id="dark_txt">Encryption Table for word {{ player.round_number }} </h4>
                 <table align="center">
                     <col width="50">
                     <col width="50">
@@ -62,32 +61,32 @@
                     <col width="50">
                     <col width="50">
                     <tr>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_1  }}”></td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_2  }}”></td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_3  }}”></td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_4  }}”></td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_5  }}”></td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_6 }}”></td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_7  }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_8  }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_9  }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_10 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_11 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_12 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_13 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_14 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_15 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_16 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_17 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_18 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_19 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_20 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_21 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_22 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_23 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_24 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_25 }}</td>
-                        <td align="center" id="highlight_title" class=“{{ player.random_char_26 }}</td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_1  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_2  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_3  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_4  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_5  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_6  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_7  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_8  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_9  }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_10 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_11 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_12 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_13 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_14 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_15 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_16 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_17 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_18 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_19 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_20 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_21 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_22 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_23 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_24 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_25 }}"></td>
+                        <td align="center" id="highlight_title" class="{{ player.random_char_26 }}"></td>
                     </tr>
                     <tr>
                         <td align="center" style="border: 1px solid black;">{{ player.random_code_1  }}</td>
@@ -130,83 +129,85 @@
 {% block styles %}
 <!-- CSS -->
     <style type="text/css">
-        .a-cap::before {
+        .a::before {
             content: 'A';
         }
-        .b-cap::before {
-            content: 'B';
+
+        .b::before {
+            content: 'B';
         }
-        .c-cap::before {
-            content: 'C';
+
+        .c::before {
+            content: 'C';
         }
-        .d-cap::before {
-            content: 'D';
+        .d::before {
+            content: 'D';
         }
-        .e-cap::before {
-            content: 'E';
+        .e::before {
+            content: 'E';
         }
-        .f-cap::before {
-            content: 'F';
+        .f::before {
+            content: 'F';
         }
-        .g-cap::before {
-            content: 'G';
+        .g::before {
+            content: 'G';
         }
-        .h-cap::before {
-            content: 'H';
+        .h::before {
+            content: 'H';
         }
-        .i-cap::before {
-            content: 'I';
+        .i::before {
+            content: 'I';
         }
-        .j-cap::before {
-            content: 'J';
+        .j::before {
+            content: 'J';
         }
-        .k-cap::before {
-            content: 'K';
+        .k::before {
+            content: 'K';
         }
-        .l-cap::before {
-            content: 'L';
+        .l::before {
+            content: 'L';
         }
-        .m-cap::before {
-            content: 'M';
+        .m::before {
+            content: 'M';
         }
-        .n-cap::before {
-            content: 'N';
+        .n::before {
+            content: 'N';
         }
-        .o-cap::before {
-            content: 'O';
+        .o::before {
+            content: 'O';
         }
-        .p-cap::before {
-            content: 'P';
+        .p::before {
+            content: 'P';
         }
-        .q-cap::before {
-            content: 'Q';
+        .q::before {
+            content: 'Q';
         }
-        .r-cap::before {
-            content: 'R';
+        .r::before {
+            content: 'R';
         }
-        .s-cap::before {
-            content: 'S';
+        .s::before {
+            content: 'S';
         }
-        .t-cap::before {
-            content: 'T';
+        .t::before {
+            content: 'T';
         }
-        .u-cap::before {
-            content: 'U';
+        .u::before {
+            content: 'U';
         }
-        .v-cap::before {
-            content: 'V';
+        .v::before {
+            content: 'V';
         }
-        .w-cap::before {
-            content: 'W';
+        .w::before {
+            content: 'W';
         }
-        .x-cap::before {
-            content: 'X';
+        .x::before {
+            content: 'X';
         }
-        .y-cap::before {
-            content: 'Y';
+        .y::before {
+            content: 'Y';
         }
-        .z-cap::before {
-            content: 'Z';
+        .z::before {
+            content: 'Z';
         }
         #light_bg{
             background-color: #ffffff;

@@ -1,0 +1,167 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
+            <h1 id="light_txt"> Payment Scheme.</h1>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if player.treat == 1 %}
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+                You have been assigned to <b>payment scheme 1</b>
+                <br><br>
+                Your and the other player’s <b>Bonus 2</b> is determined as follows:
+                <br><br>
+                Both players earn X.X$ times
+                <br>
+                <ul>
+                    <li>the total number of your correct words.</li>
+                    <li>half of the sum of both players' correct words</li>
+                </ul>
+            </p>
+            <button name="endo" value="1" class="btn button btn-large"> Continue</button>
+        </div>
+    </div>
+    {% elif player.treat == 2 %}
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+                You have been assigned to <b>payment scheme 2</b>
+                <br><br>
+                Your and the other player’s <b>Bonus 2</b> is determined as follows:
+                <br><br>
+                The player who correctly encrypted <b>fewer words</b> than the other player earns X.X$ times
+                <ul>
+                    <li>the total number of his/her correct words.</li>
+                </ul>
+                The player who correctly encrypted <b>more words</b> than the other player earns X.X$ times
+                <ul>
+                    <li>the total number of his/her correct words.</li>
+                    <li>two times her/his points</li>
+                </ul>
+                In case of a tie, the computer will randomly choose one of the two players to be paid the latter and the other one to be paid the former.
+            </p>
+            <button name="endo" value="2" class="btn button btn-large"> Continue</button>
+        </div>
+    </div>
+    {% elif player.treat == 3 %}
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+                You have been assigned to <b>payment scheme 1</b>
+                <br><br>
+                Your and the other player’s <b>Bonus 2</b> is determined as follows:
+                <br><br>
+                Both players earn X.X$ times
+                <br>
+                <ul>
+                    <li>the total number of your correct words.</li>
+                    <li>half of the sum of both players' correct words</li>
+                </ul>
+                Now you can choose if you want to maintain payment scheme 1 or if you want to change it to payment scheme 2:
+                <br>
+                Please make your choice by clicking on the button
+            </p>
+            <button name="endo" value="1" class="btn button btn-large"> Keep Scheme 1</button>
+            <button name="endo" value="2" class="btn button btn-large"> Change to Scheme 2</button>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <p>
+                You have been assigned to <b>payment scheme 2</b>
+                <br><br>
+                Your and the other player’s <b>Bonus 2</b> is determined as follows:
+                <br><br>
+                The player who correctly encrypted <b>fewer words</b> than the other player earns X.X$ times
+                <ul>
+                    <li>the total number of his/her correct words.</li>
+                </ul>
+                The player who correctly encrypted <b>more words</b> than the other player earns X.X$ times
+                <ul>
+                    <li>the total number of his/her correct words.</li>
+                    <li>two times her/his points</li>
+                </ul>
+                In case of a tie, the computer will randomly choose one of the two players to be paid the latter and the other one to be paid the former.
+                            <br><br>
+                Now you can choose if you want to maintain payment scheme 1 or if you want to change it to payment scheme 2:
+                <br>
+                Please make your choice by clicking on the button
+            </p>
+            <button name="endo" value="2" class="btn button btn-large"> Keep Scheme 2</button>
+            <button name="endo" value="1" class="btn button btn-large"> Change to Scheme 1</button>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block styles %}
+<!-- CSS -->
+    <style type="text/css">
+        #light_bg{
+            background-color: #ffffff;
+        }
+        #medium_bg{
+            background-color: #cee7eb;
+        }
+        #dark_bg{
+            background-color: #0a798a;
+        }
+        #light_txt{
+            color: #ffffff;
+        }
+        #medium_txt{
+            color: #cee7eb;
+        }
+        #bright_txt {
+            color: #ffa200;
+        }
+        #dark_txt {
+            color: #0a798a;
+        }
+        .center {
+            text-align: center;
+        }
+        #highlight_title {
+            background-color: #0a798a;
+            color: #ffffff;
+        }
+        .button2 {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #000000
+        }
+        .button2:hover {
+            background-color: #000000;
+            color: #ffa200;
+            border: 2px solid #ffa200
+        }
+        .button {
+            background-color: #0a798a;
+            color: #ffffff;
+            border: 2px solid #ffa200
+        }
+        .button:hover {
+            background-color: #ffa200;
+            color: #000000;
+            border: 2px solid #3E2723
+        }
+        .message{
+            background-color: #E1BEE7;
+            color:#000000;
+        }
+    </style>
+{% endblock %}
+
+

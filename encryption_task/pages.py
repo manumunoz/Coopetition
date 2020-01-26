@@ -105,7 +105,7 @@ class Play(Page):
         'word_code_3'
     ]
 
-    timer_text = 'Time left:'
+    timer_text = 'Time left in Part 1:'
 
     def get_timeout_seconds(self):
         return self.participant.vars['expiry'] - time.time()
