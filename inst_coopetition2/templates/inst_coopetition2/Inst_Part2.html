@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
-            <h1 id="light_txt"> Instructions <span id="bright_txt">Part 2</span.</h1>
+            <h1 id="light_txt"> Instructions <span id="bright_txt">Task 2</span>.</h1>
         </div>
     </div>
 </div>
@@ -14,83 +14,65 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        <div class="col-sm-7 border rounded" id="light_bg">
+            <p>
+            Task 2 is an encryption task identical to task 1. The main difference is the way Bonus 2 is calculated. There
+            are <b>two elements</b> to calculate Bonus 2:
+            <ul>
+                <li>A payment scheme you will choose between two options (this is explained below), and</li>
+                <br>
+                <li>Your score and the score of another participant in the encryption task 2. For the example, we
+                use the illustration in Figure 1 where YOU score 10 correct words and the OTHER participant scores 12.</li>
+            </ul>
+            <b>YOU</b> and the <b>OTHER</b> participant will be randomly matched if both of you choose the <b>same</b> payment
+            scheme. Both YOU and the OTHER participant went through both the trial and the encryption Task 1 before Task 2.
+            </p>
+        </div>
+        <div class="col-sm-5 border rounded" style='background-color: #ffffff;'>
+            <img width="100%" src="{% static "inst_coopetition2/img_example.png" %}"/>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-sm-12 border rounded" id="light_bg">
+            <h5>Payment Scheme 1</h5>
             <p>
-            In this part of the study, you choose between two schemes that determine how your Bonus 2 is calculated.
-            <br><br>
-            Afterwards, you will be <b>randomly matched with another participant</b>, who also performed the encryption
-                task in Part 1, and who chose the same scheme as you.
-            <br><br>
-            One of you will be randomly labeled <b>“Player A”</b> and the other one <b>“Player B”</b>.
-            <br><br>
-            You and the other player will perform the <b>encryption task</b> in <b>one scored round</b>.
+                If you choose scheme 1, Bonus 2 is calculated using the scores YOU and the OTHER participant get.
+                Specifically, the payment will be determined by the individual score and half of the sum of both players scores.
+                <br><br>
+                <b>Example:</b> YOU scored <b>10</b> and the OTHER scored <b>12</b> correct words. Half of the sum of
+                both players’ scores is (10+12) / 2 = 11. Then
+                <ul>
+                    <li>YOU receive (10 + 11) = 21 points. </li>
+                    <li>The OTHER player receives (12 + 11) = 23 points.</li>
+                </ul>
             </p>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 border rounded" id="light_bg">
-            <h5>If you choose Scheme 1:</h5>
+        <div class="col-sm-12 border rounded" id="light_bg">
+            <h5>Payment Scheme 2</h5>
             <p>
-            Your and the other player’s <b>Bonus 2</b> is determined as follows:
-            <br><br>
-            Both players earn X.X$ times
-            <br>
-            <ul>
-                <li>the total number of your correct words.</li>
-                <li>half of the sum of both players' correct words</li>
-            </ul>
-            </p>
-        </div>
-        <div class="col-sm-6 border rounded" id="light_bg">
-            <h5>If you choose Scheme 2:</h5>
-            <p>
-            Your and the other player’s <b>Bonus 2</b> is determined as follows:
-            <br><br>
-            The player who correctly encrypted <b>fewer words</b> than the other player earns X.X$ times
-            <ul>
-                <li>the total number of his/her correct words.</li>
-            </ul>
-            The player who correctly encrypted <b>more words</b> than the other player earns X.X$ times
-            <ul>
-                <li>the total number of his/her correct words.</li>
-                <li>two times her/his points</li>
-            </ul>
-            In case of a tie, the computer will randomly choose one of the two players to be paid the latter and the other one to be paid the former.
+                If you choose scheme 2, Bonus 2 is calculated differently for the participant with highest score than for
+                the participant with lowest score. The participants with lowest score will be paid a bonus equal to his
+                score. The participant with the highest score will be paid a bonus equal to three times his score.
+                <br><br>
+                <b>Example:</b> YOU scored <b>10</b> and the OTHER scored <b>12</b> correct words. The OTHER participant
+                has the highest score. Then:
+                <ul>
+                    <li>YOU receive 10 points. </li>
+                    <li>The OTHER player receives (12 * 3) = 36 points.</li>
+                </ul>
+                In case of a tie, the computer will randomly choose between YOU and the OTHER to be paid the higher bonus.
+                This means that, the chosen participant will be paid 3 times his score and the participant not chosen
+                will be paid his score.
             </p>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-sm-6 border rounded" id="light_bg">
-            <h5>Example Scheme 1:</h5>
-            <br>
-            Player A encrypted 10 words correctly and Player B encrypted 12 words correctly
-            <br>
-            Half of the sum of both players’ correct words is (10+12) / 2 = 11
-            <br>
-            Then Player A receives a total of X.X$ * (10 + 11) = Y$
-            <br>
-            Then Player B receives a total of X.X$ * (12 + 11) = Y$
-            </p>
-        </div>
-        <div class="col-sm-6 border rounded" id="light_bg">
-            <h5>Example Scheme 2:</h5>
-            <br>
-            Player A encrypted 10 words correctly and Player B encrypted 12 words correctly
-            <br>
-            Half of the sum of both players’ correct words is (10+12) / 2 = 11
-            <br>
-            Then Player A receives a total of X.X$ * 10 = Y$
-            <br>
-            Then Player B receives a total of X.X$ * (12 * 3) = Y$
-            </p>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-sm-12 border rounded" id="light_bg">
             <p>
-               At the end of the experiment, you will receive information about the number of words that you and the other player encrypted correctly.
+               At the end of the experiment, you will receive information about the number of words that you and the other
+                participants encrypted correctly.
             </p>
             <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Continue </button>
             <br><br>

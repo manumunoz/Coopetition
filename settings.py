@@ -12,6 +12,11 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
+        name='Socdem',
+        num_demo_participants=1,
+        app_sequence=['socdem']
+    ),
+    dict(
         name='Instructions',
         num_demo_participants=1,
         app_sequence=['inst_coopetition']

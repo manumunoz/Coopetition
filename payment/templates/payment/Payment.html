@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-sm-12 border rounded" id="light_bg">
             <p>
-                <h3>In Part 1</h3>
+                <h3>Bonus 1</h3>
                 <ul>
                 <li>You scored {{ good_p1 }}</li>
                 <li>Your Bonus 1 is: {{ points1 }}</li>
@@ -25,18 +25,12 @@
                 <h3>In Part 2</h3>
                 <ul>
                 <li>Your payment scheme was: {{ endo }}</li>
-                <li>You scored {{ good_p2 }} </li>
-                <li>The first part of your Bonus 2 is: {{ points1 }}</li>
-                <li>Depending on your partner's score the computer will determine the second part of your Bonus 2</li>
+                <li>You scored {{ good_p2 }}. Depending on the OTHER participant's score, the computer will
+                    determine if your Bonus 2 is {{ good_p2 }} or (3*{{ good_p2 }})</li>
                 </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 border rounded" id="light_bg">
             <p>
-                The total payment will be processed within <b>{{ Constants.payment_days }} days</b>.
-                <br><br>
-                Please return to <b>MTurk</b>. You will be asked to provide a code to process your payment. Your code is:
+                The total payment will be processed within <b>{{ Constants.payment_days }} days</b>. Please return to
+                <b>MTurk</b>. You will be asked to provide a code to process your payment. Your code is:
                 <br>
                 <h2 id="dark_txt">{{ participant.code }}{{ session.code }}</h2>
                 <br>

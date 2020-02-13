@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 border rounded p-1 mb-0" id="dark_bg">
-            <h1 id="light_txt"> Instructions <span id="bright_txt">Part 1</span.</h1>
+            <h1 id="light_txt"> Instructions <span id="bright_txt">Task 1</span>.</h1>
         </div>
     </div>
 </div>
@@ -16,73 +16,71 @@
     <div class="row">
         <div class="col-sm-12 border rounded" id="light_bg">
             <p>
-            In Part 1 of the study you will carry out an <b>encryption task</b> as follows:
+            The first task is carried out <b>individually</b>, it is an <b>encryption task</b>. <b>Your aim</b> is to
+            encrypt each letter of the word by typing the correct 3-digit number in the box below it. This is explained below:
             <br><br>
-            You will be shown <b>three-letter words</b> as illustrated in Figure 1. On the bottom of the screen, you will
-                see an <b>encryption table</b> where each letter of the alphabet is matched with a unique <b>3-digit number</b>.
-            <br><br>
-            <b>Your task</b> is to encrypt each letter of the word by typing the correct 3-digit number in the box below it.
-            <br><br>
-            Once you are done click on the submit button and a new word will be displayed. For each word, a new encryption table
-                will be randomly generated.
-            <br><br>
-            You will have <b>two minutes</b> to encrypt as many words as possible. Note that the <b>remaining time</b>
-                is shown in the upper right left of the screen.
-            <br><br>
-            Your <b>Bonus 1</b> will be determined as follows: <b>for every correct word you will get
-                {{ Constants.correct_pay }}  {{ Constants.exp_currency }} .</b>
-            <br><br>
-            In Part 1 there are <b>two stages</b>:
-            <ul>
-            <li>The first is a <b>training stage</b> to familiarize you with the task. This will not affect your Bonus 1.</li>
-            <li>The second is a <b>scoring stage</b>, in which you will be paid for each correctly encrypted word.</li>
-            </ul>
             See the example below for more clarity:
             </p>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4 border rounded" id="light_bg">
-            <h5>Example (Part 1).</h5>
+        <div class="col-sm-5 border rounded" id="light_bg">
+            <h5>Example Task 1.</h5>
             <p>
-            In this example, the word shown on the screen (Figure 1) is <b>NKW</b>.
-                The encryption table on the bottom shows that
-            <ul>
-                <li><b>N</b> is matched to <b>332</b>.</li>
-                <li><b>K</b> is matched to <b>717</b></li>
-                <li><b>W</b> is matched to <b>164</b></li>
-            </ul>
-            After you identify the correct 3-digit numbers, enter them in the boxes below the letters. Before you enter
-            the number, the box will initially display a zero.
+            In the encryption task, you will be shown <i>three-letter words</i>. The example in Figure 1 shows the word
+            <b>SXG</b>.
+            <br><br>
+            On the bottom of the screen, you will see an <b>encryption table</b> where each letter of the
+            alphabet is matched with a unique <b>3-digit number</b>. The encryption table on the bottom shows that
+                <ul>
+                    <li><b>S</b> is matched to <b>403</b>.</li>
+                    <li><b>X</b> is matched to <b>429</b></li>
+                    <li><b>G</b> is matched to <b>383</b></li>
+                </ul>
             </p>
         </div>
-        <div class="col-sm-8 border rounded" style='background-color: #ffffff;'>
+        <div class="col-sm-7 border rounded" style='background-color: #ffffff;'>
             <h5>Figure 1.</h5>
             <img width="100%" src="{% static "inst_coopetition/encrypt_1.png" %}"/>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4 border rounded" id="light_bg">
+        <div class="col-sm-5 border rounded" id="light_bg">
             <h5>Example (Part 2).</h5>
             <p>
-            The correct screen should look like the one displayed in Figure 2.
+                After you identify the correct 3-digit numbers, enter them in the boxes below the letters. Before you enter
+                the number, the box will initially display a zero.
+                <br><br>
+                The correct screen should look like the one displayed in Figure 2.
+                <br><br>
+                Once you are done click on the submit button and a new word will be displayed. For each word, a new encryption table
+                will be randomly generated.
+                <br><br>
+                You will have <b>two minutes</b> to encrypt as many words as possible. Note that the <b>remaining time</b>
+                is shown in the upper right left of the screen.
+                <br><br>
+                <b>Tip</b>: <i>You can easily switch between the boxes to enter the numbers by using the
+                <b>“tabulator” key</b> on your keyboard</i>.
             </p>
         </div>
-        <div class="col-sm-8 border rounded" style='background-color: #ffffff;'>
+        <div class="col-sm-7 border rounded" style='background-color: #ffffff;'>
             <h5>Figure 2.</h5>
             <img width="100%" src="{% static "inst_coopetition/encrypt_2.png" %}"/>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 border rounded" id="light_bg">
+            <h5>Bonus 1: Individual task.</h5>
             <p>
             When the time ends, the computer will count the <b>number of words you encrypted correctly</b>.
-                You will be informed of your score of correct answers at the end of the study.
+            For your <b>Bonus 1</b>, you will get {{ Constants.correct_pay }} {{ Constants.exp_currency }} for every
+            correct word.</p> You will be informed of your score of correct answers at the end of the study.
             <br><br>
-            <b>Tip</b>: <i>You can easily switch between the boxes to enter the numbers by using the
-                <b>“tabulator” key</b> on your keyboard</i>.
-                <br>
-                If you understood the instructions please click on the continue button.
+            <b>Note:</b> Before task 1 you will have a 60 second trial where you can familiarize with the encryption task. The
+            score of the trial does not add to your bonus. After the trial you will participate in Task 1, for which you will
+            have 2 minutes.
+            <br>
+            If you understood the instructions please click on the continue button.
             </p>
             <button type="otree-btn-next" class="btn button btn-md" style="float: right;"> Continue </button>
             <br><br>
